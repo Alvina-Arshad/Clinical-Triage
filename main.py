@@ -19,7 +19,7 @@ from sklearn.metrics import precision_recall_curve
 import matplotlib.pyplot as plt
 
 # Load the dataset
-data = pd.read_csv('data/Disease_symptom_and_patient_profile_dataset.csv')
+data = pd.read_csv('Disease_symptom_and_patient_profile_dataset.csv')
 
 data['Age'] = pd.to_numeric(data['Age'], errors='coerce')
 
@@ -458,6 +458,6 @@ data['XGBoost_Comparison'] = data['XGBoost_Pred'] == data['Outcome Variable']
 data['Neural_Network_Comparison'] = data['Neural_Network_Pred'] == data['Outcome Variable']
 
 # Save the updated data with comparison results to a new CSV file
-data.to_csv('data/Disease_symptom_and_patient_profile_with_comparison.csv', index=False)
+data.to_csv('Disease_symptom_and_patient_profile_with_comparison.csv', index=False)
 
 
